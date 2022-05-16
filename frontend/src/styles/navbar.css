@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+nav {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 80px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.589);
+    backdrop-filter: blur(4px);
+    border-bottom: 1px solid rgba(219, 219, 219, 0.185);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav .logo {
+    color: #51c5ff;
+    font-family: 'Macondo', cursive;
+    font-size: 25px;
+    font-weight: 600;
+}
