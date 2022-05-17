@@ -81,22 +81,6 @@ function DetailsPage() {
 
     return (
         <div>
-            {/* {selectedMovie && (
-                <>
-                    <div>
-                        Movie Name: {selectedMovie.name}
-                    </div>
-                    <div>
-                        Director: {selectedMovie.director}
-                    </div>
-                    <div>
-                        Genres: {selectedMovie.genres}
-                    </div>
-                    <br />
-                    <br />
-                    <br />
-                </>
-            )} */}
             <div className='detail-flex'>
                 <div className='detail-img-holder'>
                     <ImageLoad 

@@ -31,3 +31,12 @@ h3.similar-movies-heading::before {
 .recommend-slider {
     margin: 0px 50px !important;
 }
+.top-25-imdb {
+    margin-bottom: 50px;
+}
+
+@media screen and  (min-width: 1600px) {
+    .homepage-container {
+        margin-top: 60px;
+    }
+}
