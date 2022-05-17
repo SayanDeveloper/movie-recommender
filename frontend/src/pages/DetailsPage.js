@@ -1,9 +1,10 @@
 import React, {useState, useEffect} from 'react';
-import {useParams} from 'react-router-dom';
+import {useParams, Link} from 'react-router-dom';
 import axios from 'axios';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Card from '../components/card';
+import ImageLoad from '../components/imageLoad';
 
 function DetailsPage() {
     const [allRecommended, setAllRecommended] = useState([]);
@@ -11,6 +12,8 @@ function DetailsPage() {
     const {movieIndex} = useParams();
 
     useEffect(() => {
+        setAllRecommended([]);
+        setSelectedMovie({});
         const url = "http://localhost:5000/"
         const params = {
             "index": parseInt(movieIndex),
@@ -25,7 +28,7 @@ function DetailsPage() {
         .catch(err => {
             console.log(err.message);
         })
-    }, [])
+    }, [movieIndex])
     console.log(allRecommended);
 
     const responsive = {
@@ -94,6 +97,25 @@ function DetailsPage() {
                     <br />
                 </>
             )} */}
+            <div className='detail-flex'>
+                <div className='detail-img-holder'>
+                    <ImageLoad 
+                        className={"detail-page-img"}
+                        main={selectedMovie?.thumbnail}
+                        placeholder={selectedMovie?.optimised}
+                        alt={"Poster"}
+                        />
+                </div>
+                <div className='movie-details-container'>
+                    <h1>{selectedMovie?.name}</h1>
+                    <h4>Director: {selectedMovie?.director}</h4>
+                    <h4>Casts: {selectedMovie?.cast}</h4>
+                    <h4>IMDB Rating: {selectedMovie?.rating}</h4>
+                    <h4>Genres: {selectedMovie?.genres}</h4>
+                </div>
+            </div>
+
+            <h3 className='similar-movies-heading'>Similar Movies</h3>
             <div className='recommend-slider'>
                 <Carousel
                     responsive={responsive}
@@ -103,14 +125,13 @@ function DetailsPage() {
                     {allRecommended?.map((movieData, index) => {
                         return (
                             <div key={index}>
-                                <Card 
-                                    mainImg={movieData.thumbnail}
-                                    optimisedImg={movieData.optimised}
-                                    title={movieData.name}
-                                    genres={movieData.genres} />
-                                <br />
-                                <br />
-                                <br />
+                                <Link to={`/movie/${movieData.index}`}>
+                                    <Card 
+                                        mainImg={movieData.thumbnail}
+                                        optimisedImg={movieData.optimised}
+                                        title={movieData.name}
+                                        genres={movieData.genres} />
+                                </Link>
                             </div>
                         )
                     })}

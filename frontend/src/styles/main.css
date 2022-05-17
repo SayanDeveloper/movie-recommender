@@ -1,3 +1,33 @@
+.detail-flex {
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.detail-page-img {
+    width: 200px;
+    height: 340px;
+    object-fit: cover;
+}
+.movie-details-container {
+    width: 500px;
+}
+h3.similar-movies-heading {
+    margin-left: 70px;
+    font-size: 25px;
+    position: relative;
+}
+h3.similar-movies-heading::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: -20px;
+    width: 10px;
+    height: 100%;
+    background-color: aqua;
+}
 .recommend-slider {
     margin: 0px 50px !important;
 }
