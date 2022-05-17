@@ -29,6 +29,10 @@ function DetailsPage() {
     console.log(allRecommended);
 
     const responsive = {
+        big: {
+            breakpoint: {max: 2000, min: 1700},
+            items: 6
+        },
         sc: {
             breakpoint: {max: 1700, min: 1480},
             items: 5
@@ -51,10 +55,25 @@ function DetailsPage() {
             items: 2,
         },
         xs: {
-            breakpoint: { max: 640, min: 300 },
+            breakpoint: { max: 640, min: 510 },
             items: 1,
             partialVisibilityGutter:180
         },
+        xsmal: {
+            breakpoint: { max: 510, min: 427 },
+            items: 1,
+            partialVisibilityGutter: 100
+        },
+        xsmal1: {
+            breakpoint: { max: 427, min: 370 },
+            items: 1,
+            partialVisibilityGutter: 50
+        },
+        xsmal2: {
+            breakpoint: { max: 370, min: 327 },
+            items: 1,
+            partialVisibilityGutter: 15
+        }
     };
 
     return (

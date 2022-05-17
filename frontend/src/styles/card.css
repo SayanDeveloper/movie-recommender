@@ -12,7 +12,7 @@
     cursor: pointer;
 
     /* forced for testing */
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
 }
 .card-container::before {
     content: '';
@@ -47,8 +47,17 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 250px;
-    height: 320px;
+    /* width: 250px;
+    height: 320px; */
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     z-index: -2;
+}
+
+@media screen and (max-width: 557px) {
+    .card-container {
+        width: 180px;
+        height: 250px;
+    }
 }
