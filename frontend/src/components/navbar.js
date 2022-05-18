@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router';
+import { Link } from 'react-router-dom';
 import '../styles/navbar.css'
 
 function Navbar() {
@@ -13,9 +14,9 @@ function Navbar() {
 
     return (
         <nav>
-            <div className='logo'>
+            <Link to={"/"} className='logo'>
                 Movie-Recommender
-            </div>
+            </Link>
             <div className='search-bar'>
                 <form onSubmit={formSubmitHandler}>
                     <input 

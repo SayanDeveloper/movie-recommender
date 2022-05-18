@@ -1,5 +1,6 @@
 import axios from 'axios';
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
+import { GlobalContext } from '../context/provider';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { Link } from 'react-router-dom';
@@ -9,10 +10,11 @@ function HomePage() {
     const [top25movies, setTop25Movies] = useState([]);
     const [topActions, setTopActions] = useState([]);
     const [topAnimated, setTopAnimated] = useState([]);
+    const [loading, setLoading] = useContext(GlobalContext);
 
     const responsive = {
         big: {
-            breakpoint: {max: 2000, min: 1700},
+            breakpoint: {max: 2100, min: 1700},
             items: 6
         },
         sc: {
@@ -59,21 +61,23 @@ function HomePage() {
     };
 
     useEffect(() => {
+        setLoading(true);
         const url = "http://localhost:5000/home";
         const params = {
             genres: ["action", "adventure"],
         };
         axios.post(url, params)
-            .then(res => {
-                console.log(res.data);
-                setTop25Movies(res.data.top25imdb);
-                setTopActions(res.data.topActions);
-                setTopAnimated(res.data.topAnimated);
-            })
-            .catch(err => {
-                console.log(err.message);
-            })
-    }, [])
+        .then(res => {
+            console.log(res.data);
+            setTop25Movies(res.data.top25imdb);
+            setTopActions(res.data.topActions);
+            setTopAnimated(res.data.topAnimated);
+            setLoading(false);
+        })
+        .catch(err => {
+            console.log(err.message);
+        })
+        }, [])
 
     return (
         <div className='homepage-container'>

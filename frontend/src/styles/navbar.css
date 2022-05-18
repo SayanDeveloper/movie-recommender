@@ -54,3 +54,10 @@ nav .search-bar {
     background-color: #51c5ff;
     color: black;
 }
+
+@media screen and (min-width: 1700px) {
+    nav {
+        padding: 0px 100px;
+        width: calc(100vw - 200px);
+    }
+}

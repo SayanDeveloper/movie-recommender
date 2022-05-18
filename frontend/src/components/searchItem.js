@@ -5,7 +5,7 @@ function SearchItem({movieIndex, poster, name, genre}) {
   return (
     <Link to={`/movie/${movieIndex}`}>
         <div className='each-search-item'>
-            <img src={poster} />
+            <img src={poster} alt={"poster"} />
             <div className='search-movie-details'>
                 <h3>{name}</h3>
                 <h5>{genre}</h5>

@@ -1,5 +1,6 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import {useParams, Link} from 'react-router-dom';
+import { GlobalContext } from '../context/provider';
 import axios from 'axios';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
@@ -10,8 +11,10 @@ function DetailsPage() {
     const [allRecommended, setAllRecommended] = useState([]);
     const [selectedMovie, setSelectedMovie] = useState({});
     const {movieIndex} = useParams();
+    const [loading, setLoading] = useContext(GlobalContext);
 
     useEffect(() => {
+        setLoading(true);
         setAllRecommended([]);
         setSelectedMovie({});
         const url = "http://localhost:5000/"
@@ -24,6 +27,7 @@ function DetailsPage() {
             console.log(res.data);
             setAllRecommended(res.data.movies);
             setSelectedMovie(res.data.details);
+            setLoading(false);
         })
         .catch(err => {
             console.log(err.message);
@@ -33,7 +37,7 @@ function DetailsPage() {
 
     const responsive = {
         big: {
-            breakpoint: {max: 2000, min: 1700},
+            breakpoint: {max: 2100, min: 1700},
             items: 6
         },
         sc: {

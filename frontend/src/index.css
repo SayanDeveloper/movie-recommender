@@ -17,3 +17,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+a {
+  text-decoration: none !important;
+}
+.react-multiple-carousel__arrow {
+  z-index: 4 !important;
+}
