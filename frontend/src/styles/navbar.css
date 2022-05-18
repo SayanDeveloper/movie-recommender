@@ -4,13 +4,14 @@ nav {
     top: 0px;
     left: 0px;
     height: 80px;
-    width: 100%;
+    width: calc(100% - 100px);
+    padding: 0px 50px;
     background-color: rgba(0, 0, 0, 0.658);
     backdrop-filter: blur(4px);
     border-bottom: 1px solid rgba(219, 219, 219, 0.185);
     z-index: 10;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 nav .logo {
@@ -18,4 +19,38 @@ nav .logo {
     font-family: 'Macondo', cursive;
     font-size: 25px;
     font-weight: 600;
+}
+nav .search-bar {
+    position: relative;
+}
+.search-bar input {
+    padding: 0px 8px;
+    font-size: 16px;
+    width: 260px;
+    height: 35px;
+    padding-right: 50px;
+    outline: none;
+    border: 1px solid #0b96db;
+    background-color: rgb(37, 37, 37);
+    border-radius: 5px;
+    color: white;
+}
+.search-bar input::placeholder {
+    color: rgb(180, 180, 180);
+}
+.search-bar button {
+    position: absolute;
+    right: 0px;
+    height: 37px;
+    width: 40px;
+    font-size: 18px;
+    border: 1px solid aqua;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.search-bar button:hover {
+    background-color: #51c5ff;
+    color: black;
 }

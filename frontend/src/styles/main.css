@@ -34,6 +34,32 @@ h3.similar-movies-heading::before {
 .top-25-imdb {
     margin-bottom: 50px;
 }
+.search-results-container {
+    width: calc(100vw - 100px);
+    max-width: 800px;
+    margin: auto;
+    padding-top: 30px;
+}
+.each-search-item {
+    width: 100%;
+    min-height: 110px;
+    background-color: rgb(20, 20, 20);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.each-search-item:hover {
+    background-color: rgb(41, 41, 41);
+    box-shadow: 3px 3px 5px black;
+}
+.each-search-item img {
+    margin-left: 30px;
+    margin-right: 50px;
+}
 
 @media screen and  (min-width: 1600px) {
     .homepage-container {

@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
 import DetailsPage from './pages/DetailsPage';
+import SearchResultPage from './pages/SearchResult';
 import './styles/main.css';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Route exact path='/signup' element={<SignupPage />} />
           <Route exact path='/login' element={<LoginPage />} />
           <Route exact path='/movie/:movieIndex' element={<DetailsPage />} />
+          <Route exact path='/search/:query' element={<SearchResultPage />} />
         </Routes>
       </Router>
     </>
