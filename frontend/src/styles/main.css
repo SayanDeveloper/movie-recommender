@@ -78,6 +78,12 @@ h3.similar-movies-heading::before {
     .movie-details-container {
         width: 100%;
     }
+    .recommend-slider {
+        margin: 0px 30px !important;
+    }
+    h3.similar-movies-heading  {
+        margin-left: 50px;
+    }
 }
 @media screen and (max-width: 700px) {
     #root {

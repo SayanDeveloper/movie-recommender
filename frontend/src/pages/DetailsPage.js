@@ -103,7 +103,7 @@ function DetailsPage() {
                 </div>
             </div>
 
-            <h3 className='similar-movies-heading'>Similar Movies</h3>
+            <h3 className='similar-movies-heading'>Recommended Movies</h3>
             <div className='recommend-slider'>
                 <Carousel
                     responsive={responsive}
