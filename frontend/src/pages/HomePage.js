@@ -63,7 +63,7 @@ function HomePage() {
     useEffect(() => {
         setLoading(true);
         // const url = "http://localhost:5000/home";
-        const url = "http://3.144.115.145:5000/home";
+        const url = "https://sayan.gq/home";
         const params = {
             genres: ["action", "adventure"],
         };
