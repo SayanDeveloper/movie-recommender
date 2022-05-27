@@ -10,6 +10,9 @@ import SearchResultPage from './pages/SearchResult';
 import './styles/main.css';
 import Loader from './components/loader';
 
+// test
+import ParticlesLoader from './components/particles';
+
 function App() {
   const [loading, setLoading] = useContext(GlobalContext);
 
@@ -21,7 +24,7 @@ function App() {
         <Routes>
           <Route exact path='/' element={<HomePage />} />
           <Route exact path='/signup' element={<SignupPage />} />
-          <Route exact path='/login' element={<LoginPage />} />
+          <Route exact path='/login' element={<ParticlesLoader />} />
           <Route exact path='/movie/:movieIndex' element={<DetailsPage />} />
           <Route exact path='/search/:query' element={<SearchResultPage />} />
         </Routes>
