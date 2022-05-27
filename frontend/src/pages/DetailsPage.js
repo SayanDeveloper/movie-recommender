@@ -17,7 +17,8 @@ function DetailsPage() {
         setLoading(true);
         setAllRecommended([]);
         setSelectedMovie({});
-        const url = "http://localhost:5000/"
+        // const url = "http://localhost:5000/"
+        const url = "http://3.144.115.145:5000/"
         const params = {
             "index": parseInt(movieIndex),
             "title": "The Dark Knight"

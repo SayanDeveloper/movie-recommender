@@ -12,7 +12,8 @@ function SearchResultPage() {
     useEffect(() => {
         setLoading(true);
         setSearchResults([]);
-        const url = "http://localhost:5000/search";
+        // const url = "http://localhost:5000/search";
+        const url = "http://3.144.115.145:5000/search";
         const params = {
             query: query
         }
