@@ -35,7 +35,7 @@
   > Frontend Dependencies are provided in [/frontend/package.json](https://github.com/SayanDeveloper/movie-suggestor/blob/main/frontend/package.json)
 
 ## Setup Guide To Run In Localhost
-- Firstly clone the github repo using `git clone https://github.com/SayanDeveloper/movie-suggestor.git`
+- Firstly clone the github repo using `git clone https://github.com/SayanDeveloper/movie-recommender.git`
 - Then for backend setup, open terminal in the root directory of this repo,
 - Type in terminal `pip3 install -r requirements.txt` (You should have python3 and pip installed in your machine)
 - Then `python3 app.py`
