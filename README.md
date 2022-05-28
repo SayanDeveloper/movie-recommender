@@ -34,6 +34,19 @@
 - Frontend
   > Frontend Dependencies are provided in `/frontend/package.json`
 
-## Setup Guide for localhost
+## Setup Guide To Run In Localhost
+- Firstly clone the github repo using `git clone https://github.com/SayanDeveloper/movie-suggestor.git`
+- Then for backend setup, open terminal in the root directory of this repo,
+- Type in terminal `pip3 install -r requirements.txt` (You should have python3 and pip installed in your machine)
+- Then `python3 app.py`
+- Now your backend server is running
+- For frontend, open another terminal and go to `/frontend` directory
+- Type `npm install` to install all dependencies of frontend (npm and node is required in your machine to run this)
+- Then `npm start` to start react server
+- I have pushed the code for production server so using my production backend server domain for api fetching
+- To use your localhost as api endpoint, replacec `url` constant in `useEffect` of the files [DetailsPage.js](https://github.com/SayanDeveloper/movie-suggestor/blob/main/frontend/src/pages/DetailsPage.js), [HomePage.js](https://github.com/SayanDeveloper/movie-suggestor/blob/main/frontend/src/pages/HomePage.js), [SearchResult.js](https://github.com/SayanDeveloper/movie-suggestor/blob/main/frontend/src/pages/SearchResult.js)
+  <img src"https://user-images.githubusercontent.com/67837886/170818428-f5452c62-945a-4c26-9dee-9170e02d5c0b.png" />
+                                                                                                                 
+## Happy Coding :-)
 
-  
+
