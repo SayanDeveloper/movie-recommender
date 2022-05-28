@@ -9,3 +9,7 @@
 <img src="https://img.shields.io/github/stars/SayanDeveloper/movie-suggestor"/>
 <img src="https://img.shields.io/github/forks/SayanDeveloper/movie-suggestor"/>
 </p>
+
+## What is it?
+
+**Movie-Recommender** is a website to demonstrate how recommendation engine works in real world applications. Here I have applied only content based filtering for the recommendation engine. Also I have scraped the movie dataset from imdb. This recommendation engine accuracy will improve more if we put more relevant data in dataset.
