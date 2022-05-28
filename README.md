@@ -25,14 +25,14 @@
 
 ## Dependencies
 - Backend
-  > Backend Dependencies are provided in `/requirements.txt`
+  > Backend Dependencies are provided in `[/requirements.txt](https://github.com/SayanDeveloper/movie-suggestor/blob/main/requirements.txt)`
   - flask
   - flask_cors
   - pandas
   - numpy
   - sklearn
 - Frontend
-  > Frontend Dependencies are provided in `/frontend/package.json`
+  > Frontend Dependencies are provided in `[/frontend/package.json](https://github.com/SayanDeveloper/movie-suggestor/blob/main/frontend/package.json)`
 
 ## Setup Guide To Run In Localhost
 - Firstly clone the github repo using `git clone https://github.com/SayanDeveloper/movie-suggestor.git`
