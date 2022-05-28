@@ -44,8 +44,7 @@
 - Type `npm install` to install all dependencies of frontend (npm and node is required in your machine to run this)
 - Then `npm start` to start react server
 - I have pushed the code for production server so using my production backend server domain for api fetching
-- To use your localhost as api endpoint, replacec `url` constant in `useEffect` of the files [DetailsPage.js](https://github.com/SayanDeveloper/movie-suggestor/blob/main/frontend/src/pages/DetailsPage.js), [HomePage.js](https://github.com/SayanDeveloper/movie-suggestor/blob/main/frontend/src/pages/HomePage.js), [SearchResult.js](https://github.com/SayanDeveloper/movie-suggestor/blob/main/frontend/src/pages/SearchResult.js)
-<img src"https://user-images.githubusercontent.com/67837886/170818428-f5452c62-945a-4c26-9dee-9170e02d5c0b.png" />
+- To use your localhost as api endpoint, replace `url` constant in `useEffect` of the files [DetailsPage.js](https://github.com/SayanDeveloper/movie-suggestor/blob/main/frontend/src/pages/DetailsPage.js), [HomePage.js](https://github.com/SayanDeveloper/movie-suggestor/blob/main/frontend/src/pages/HomePage.js), [SearchResult.js](https://github.com/SayanDeveloper/movie-suggestor/blob/main/frontend/src/pages/SearchResult.js)
                                                                                                                  
 ## Happy Coding :-)
 
