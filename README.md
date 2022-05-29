@@ -38,7 +38,7 @@
 - Firstly clone the github repo using `git clone https://github.com/SayanDeveloper/movie-recommender.git`
 - Then for backend setup, open terminal in the root directory of this repo,
 - Type in terminal `pip3 install -r requirements.txt` (You should have python3 and pip installed in your machine)
-- Then `python3 app.py`
+- Then `python app.py`
 - Now your backend server is running
 - For frontend, open another terminal and go to `/frontend` directory
 - Type `npm install` to install all dependencies of frontend (npm and node is required in your machine to run this)
