@@ -63,7 +63,7 @@ function HomePage() {
     useEffect(() => {
         setLoading(true);
         // const url = "http://localhost:5000/home";
-        const url = "https://sayan.gq/home";
+        const url = "https://ezsupply.cf/home";
         const params = {
             genres: ["action", "adventure"],
         };

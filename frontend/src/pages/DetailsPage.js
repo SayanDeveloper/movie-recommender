@@ -18,7 +18,7 @@ function DetailsPage() {
         setAllRecommended([]);
         setSelectedMovie({});
         // const url = "http://localhost:5000/"
-        const url = "https://sayan.gq/"
+        const url = "https://ezsupply.cf/"
         const params = {
             "index": parseInt(movieIndex),
             "title": "The Dark Knight"

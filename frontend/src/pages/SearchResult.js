@@ -13,7 +13,7 @@ function SearchResultPage() {
         setLoading(true);
         setSearchResults([]);
         // const url = "http://localhost:5000/search";
-        const url = "https://sayan.gq/search";
+        const url = "https://ezsupply.cf/search";
         const params = {
             query: query
         }
