@@ -63,7 +63,7 @@ function HomePage() {
     useEffect(() => {
         setLoading(true);
         // const url = "http://localhost:5000/home";
-        const url = "https://ezsupply.cf/home";
+        const url = "https://movie-recommender.up.railway.app/home";
         const params = {
             genres: ["action", "adventure"],
         };
