@@ -13,7 +13,7 @@ function SearchResultPage() {
         setLoading(true);
         setSearchResults([]);
         // const url = "http://localhost:5000/search";
-        const url = "https://movie-recommender.up.railway.app/search";
+        const url = "https://api.moviereq.sayan.rocks//search";
         const params = {
             query: query
         }

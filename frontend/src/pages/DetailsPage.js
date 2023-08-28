@@ -18,7 +18,7 @@ function DetailsPage() {
         setAllRecommended([]);
         setSelectedMovie({});
         // const url = "http://localhost:5000/"
-        const url = "https://movie-recommender.up.railway.app/"
+        const url = "https://api.moviereq.sayan.rocks//"
         const params = {
             "index": parseInt(movieIndex),
             "title": "The Dark Knight"
