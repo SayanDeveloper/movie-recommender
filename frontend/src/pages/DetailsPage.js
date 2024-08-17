@@ -17,8 +17,7 @@ function DetailsPage() {
         setLoading(true);
         setAllRecommended([]);
         setSelectedMovie({});
-        // const url = "http://localhost:5000/"
-        const url = "https://api.moviereq.sayan.rocks//"
+        const url = "https://api.moviereq.sayan.rocks/"
         const params = {
             "index": parseInt(movieIndex),
             "title": "The Dark Knight"
