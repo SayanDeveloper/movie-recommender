@@ -12,8 +12,7 @@ function SearchResultPage() {
     useEffect(() => {
         setLoading(true);
         setSearchResults([]);
-        // const url = "http://localhost:5000/search";
-        const url = "https://api.moviereq.sayan.rocks//search";
+        const url = "https://api.moviereq.sayan.rocks/search";
         const params = {
             query: query
         }

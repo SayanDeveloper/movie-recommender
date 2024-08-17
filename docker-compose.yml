@@ -1,0 +1,22 @@
+services:
+  backend:
+    image: moviereq-backend
+    container_name: moviereq-backend
+    pull_policy: never
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 6000:5000
+  
+  frontend:
+    image: moviereq-frontend
+    container_name: moviereq-frontend
+    pull_policy: never
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    depends_on:
+      - backend
