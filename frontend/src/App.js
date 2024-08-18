@@ -9,7 +9,7 @@ import './styles/main.css';
 import Loader from './components/loader';
 
 function App() {
-  const [loading, setLoading] = useContext(GlobalContext);
+  const {loading} = useContext(GlobalContext);
 
   return (
     <>

@@ -1,39 +1,34 @@
 import React, {useState, useEffect, useContext} from 'react';
 import {useParams, Link} from 'react-router-dom';
 import { GlobalContext } from '../context/provider';
-import axios from 'axios';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Card from '../components/card';
 import ImageLoad from '../components/imageLoad';
+import axiosInstance from '../utils/axios';
 
 function DetailsPage() {
     const [allRecommended, setAllRecommended] = useState([]);
     const [selectedMovie, setSelectedMovie] = useState({});
     const {movieIndex} = useParams();
-    const [loading, setLoading] = useContext(GlobalContext);
+    const {setLoading} = useContext(GlobalContext);
 
     useEffect(() => {
         setLoading(true);
         setAllRecommended([]);
         setSelectedMovie({});
-        const url = "https://api.moviereq.sayan.rocks/"
         const params = {
-            "index": parseInt(movieIndex),
-            "title": "The Dark Knight"
+            index: parseInt(movieIndex)
         }
-        axios.post(url, params)
+        axiosInstance.post('/', params)
         .then(res => {
-            console.log(res.data);
             setAllRecommended(res.data.movies);
             setSelectedMovie(res.data.details);
             setLoading(false);
         })
-        .catch(err => {
-            console.log(err.message);
-        })
+        .catch(err => {})
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [movieIndex])
-    console.log(allRecommended);
 
     const responsive = {
         big: {

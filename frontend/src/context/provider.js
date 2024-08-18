@@ -7,7 +7,7 @@ export const GlobalProvider = ({children}) => {
     const [loading, setLoading] = useState(false);
 
     return (
-        <GlobalContext.Provider value={[loading, setLoading]}>
+        <GlobalContext.Provider value={{loading, setLoading}}>
             {children}
         </GlobalContext.Provider>
     )
