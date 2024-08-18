@@ -1,29 +1,27 @@
 import React, {useState, useEffect, useContext} from 'react'
 import { GlobalContext } from '../context/provider';
-import axios from 'axios';
 import { useParams } from 'react-router';
 import SearchItem from '../components/searchItem'
+import axiosInstance from '../utils/axios';
 
 function SearchResultPage() {
     const {query} = useParams();
     const [searchResults, setSearchResults] = useState([]);
-    const [loading, setLoading] = useContext(GlobalContext);
+    const {setLoading} = useContext(GlobalContext);
 
     useEffect(() => {
         setLoading(true);
         setSearchResults([]);
-        const url = "https://api.moviereq.sayan.rocks/search";
         const params = {
             query: query
         }
-        axios.post(url, params)
+        axiosInstance.post('/search', params)
         .then(res => {
             setSearchResults(res.data.results);
             setLoading(false);
         })
-        .catch(err => {
-            console.log(err.message)
-        })
+        .catch(err => {})
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [query])
 
     return (
@@ -36,7 +34,8 @@ function SearchResultPage() {
                         movieIndex={each.index}
                         poster={each.optimised}
                         name={each.name}
-                        genre={each.genres} />
+                        genre={each.genres}
+                    />
                 )
             })}
         </div>

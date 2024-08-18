@@ -7,7 +7,7 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - 6000:5000
+      - 6500:5000
   
   frontend:
     image: moviereq-frontend
