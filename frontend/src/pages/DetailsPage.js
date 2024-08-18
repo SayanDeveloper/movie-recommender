@@ -17,10 +17,7 @@ function DetailsPage() {
         setLoading(true);
         setAllRecommended([]);
         setSelectedMovie({});
-        const params = {
-            index: parseInt(movieIndex)
-        }
-        axiosInstance.post('/', params)
+        axiosInstance.get(`/movie/${parseInt(movieIndex)}`)
         .then(res => {
             setAllRecommended(res.data.movies);
             setSelectedMovie(res.data.details);
