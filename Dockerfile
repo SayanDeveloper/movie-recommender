@@ -14,9 +14,11 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Install gunicorn
-RUN pip install gunicorn
+RUN pip install uvicorn
 
-# Set the entrypoint command to run the Flask app with gunicorn
-CMD ["gunicorn", "app:app", "-b", "0.0.0.0:5000"]
-
+# Expose the port
 EXPOSE 5000
+
+# Set the entrypoint command to run the fastapi app with uvicorn
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "5000"]
+
