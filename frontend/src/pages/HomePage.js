@@ -65,7 +65,7 @@ function HomePage() {
         const params = {
             genres: ["action", "adventure"],
         };
-        axiosInstance.post('/home', params)
+        axiosInstance.get('/', params)
         .then(res => {
             setTop25Movies(res.data.top25imdb);
             setTopActions(res.data.topActions);

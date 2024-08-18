@@ -12,10 +12,7 @@ function SearchResultPage() {
     useEffect(() => {
         setLoading(true);
         setSearchResults([]);
-        const params = {
-            query: query
-        }
-        axiosInstance.post('/search', params)
+        axiosInstance.get(`/search?query=${query}`)
         .then(res => {
             setSearchResults(res.data.results);
             setLoading(false);
